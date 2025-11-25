@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>World Compendium � Guilds, Heroes, Pantheon, Primordials, Races, Monsters, Magic</title>
+<style>
+body { font-family: Arial, sans-serif; background:#111; color:#eee; margin:0; padding:0; }
+h2 { margin-top:0; }
+.container { display:flex; height:100vh; }
+.tabs { width:250px; background:#1a1a1a; overflow-y:auto; border-right:2px solid #333; }
+.tab { padding:12px; cursor:pointer; border-bottom:1px solid #333; }
+.tab:hover { background:#222; }
+.tab.active { background:#333; font-weight:bold; }
+.content { flex:1; padding:20px; overflow-y:auto; }
+.section { display:none; }
+.section.active { display:block; }
+pre { white-space:pre-wrap; }
+</style>
+<script>
+function showTab(id){
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+    document.getElementById('tab-'+id).classList.add('active');
+    document.getElementById(id).classList.add('active');
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<!--------------------------- TABS --------------------------->
+<div class="tabs">
+    <div class="tab active" id="tab-guild" onclick="showTab('guild')">Adventurers Guild</div>
+    <div class="tab" id="tab-hero" onclick="showTab('hero')">Hero System</div>
+    <div class="tab" id="tab-monsters" onclick="showTab('monsters')">Monster Types</div>
+    <div class="tab" id="tab-compendium" onclick="showTab('compendium')">Monster Compendium</div>
+    <div class="tab" id="tab-neutral" onclick="showTab('neutral')">Neutral Monsters</div>
+    <div class="tab" id="tab-races" onclick="showTab('races')">Races</div>
+    <div class="tab" id="tab-halves" onclick="showTab('halves')">Halfbreeds</div>
+    <div class="tab" id="tab-hybrids" onclick="showTab('hybrids')">Non-Human Hybrids</div>
+    <div class="tab" id="tab-magic" onclick="showTab('magic')">Magic System</div>
+    <div class="tab" id="tab-evolution" onclick="showTab('evolution')">Monster Evolution</div>
+    <div class="tab" id="tab-gods" onclick="showTab('gods')">Twelvefold Pantheon</div>
+    <div class="tab" id="tab-primordials" onclick="showTab('primordials')">Primordials & Prayers</div>
+</div>
+
+<!--------------------------- CONTENT --------------------------->
+
+<div class="content">
+
+<!-- Guild -->
+<div class="section active" id="guild">
+<h2>Adventurers Guild System</h2>
+<pre>
+Purpose
+The Adventurers’ Guild serves as a neutral organization, uniting mercenaries, explorers, hunters, and warriors under one banner. It regulates adventuring work, provides missions, ensures fair payment, and prevents chaos caused by unchecked rogue adventurers.
+
+Ranks (E → S)
+Each rank is earned by completing quests, showing capability, and passing occasional guild evaluations.
+E-Rank (Novice):
+    • Fresh recruits, trainees, or amateurs.
+    • Tasks: simple deliveries, herb gathering, pest extermination.
+    • Treated as disposable labor, often underestimated.
+D-Rank (Apprentice):
+    • Have survived enough to show reliability.
+    • Tasks: low-risk monster hunting, caravan escorting, light dungeon exploration.
+    • Start forming small parties.
+C-Rank (Professional):
+    • Considered competent and recognized by locals.
+    • Tasks: mid-tier monster hunts, dungeon clearing, dangerous escorts, defense contracts.
+    • Allowed access to restricted guild libraries and better equipment loans.
+B-Rank (Veteran):
+    • Experienced, hardened adventurers.
+    • Tasks: large-scale monster threats, fortress/dungeon leadership, subjugation of dangerous beasts.
+    • Influence: often respected by nobles, sometimes hired for military operations.
+A-Rank (Elite):
+    • Renowned adventurers, feared and admired alike.
+    • Tasks: nation-level threats, ancient ruins, high-risk dungeon bosses, assassination of high-value targets.
+    • Influence: personal reputation rivals minor lords.
+S-Rank (Legend):
+    • Rare individuals, often only a handful in the entire continent.
+    • Tasks: world-level crises, demon lords, primordial beasts, or disasters beyond armies.
+    • Influence: kings and rulers treat them with caution, some are whispered about as living myths.
+
+Guild Structure
+    • Guildmaster: Oversees each branch, often an ex-A or S rank adventurer.
+    • Receptionists: Handle contracts, paperwork, and mediate between adventurers and clients.
+    • Enforcers: Guild-appointed officers who ensure adventurers obey guild laws.
+
+Guild Laws
+    1. Do not kill or harm fellow guild members without sanction.
+    2. Do not cheat or swindle clients.
+    3. Do not interfere with other guild branches’ jurisdiction.
+    4. High crimes (treason, mass slaughter, aiding world-level threats) = permanent blacklisting or execution.
+
+Currency & Rewards
+    • Payment depends on rank and mission difficulty.
+    • Adventurers earn Guild Credits, which can be exchanged for coin, equipment, spell scrolls, or favors.
+    • High-rank adventurers often receive custom quests directly from nobility or nations.
+</pre>
+</div>
+
+<!-- Hero System -->
+<div class="section" id="hero">
+<h2>The Hero System</h2>
+<pre>
+Origin
+In times of great crisis, the world’s Will — some call it the Primordial Balance, others the Gods’ Accord — chooses individuals to bear the title of Hero. Unlike adventurers, heroes are bound by fate, carrying destinies that shake nations and rewrite history.
+
+Hero Ranks & Recognition
+Unlike the guild’s letter-ranks, heroes are classified by Titles, reflecting their deeds and divine recognition.
+Chosen (Awakened):
+    • Recently blessed, often unaware of full potential.
+    • Myth says many “Chosen” are ordinary people from other worlds, pulled at random.
+Guardian:
+    • Protectors of a region, often defeating great threats or saving a city.
+    • Begin to attract followers and legends.
+Champion:
+    • Renowned across nations, feared by enemies.
+    • Capable of clashing with generals, demon nobles, or calamity beasts.
+Paragon:
+    • Symbolic figures, embodying hope and fear.
+    • Tales of their battles spread across continents.
+    • Often granted relics by gods.
+Mythic Hero:
+    • Rare few who rise beyond mortality.
+    • Their names become eternal — recorded in holy texts, whispered in prayers.
+    • Some vanish after their great battle, others ascend to godhood.
+
+Myths of Reincarnated Heroes
+    1. The Stranger’s Mark – Legends say reincarnated heroes from another world (often “Earth”) carry unknown knowledge, strange tactics, and innovations no native could conceive. Some speak of weapons of fire and thunder, or strategies that changed the tide of wars.
+    2. The Price of Summoning – In ancient tales, summoning a hero from another world required great sacrifice: kingdoms trading hundreds of lives, or even sealing away part of their history. Because of this, many kingdoms fear the ritual, even if desperate.
+    3. The Hidden Ones – Not all reincarnated souls become heroes. Some were said to hide among peasants or adventurers, shaping the world subtly with Earth-born knowledge. A few were feared and hunted as “Heretics of the Gods” for rejecting their heroic destiny.
+    4. The Eternal Return – Oldest myths claim the same souls are reborn repeatedly across ages, always from Earth, always when the world faces collapse. Each new life carries faint memories of the last — dreams of battles they never fought, or grief over worlds long gone.
+
+The Hero’s Rights & Burdens
+    • Rights: Heroes are recognized by nations, given authority above military officers, free passage through cities, and access to divine relics.
+    • Burden: They are bound by divine compulsion — a subtle push of fate — to confront world-ending threats. Some resist, but resisting too much can twist their souls.
+
+Guild vs. Hero Distinction
+    • Adventurers seek coin, fame, and survival.
+    • Heroes are living myths chosen by fate, whether they want it or not.
+</pre>
+</div>
+
+<!-- Monster Types -->
+<div class="section" id="monsters">
+<h2>Monster Types</h2>
+<pre>
+Beastkin Threats (Common Monster Types)
+    • Goblins – Tribal scavengers, dangerous in numbers, known for ambushes.
+    • Orcs – Brutish warriors, stronger than goblins, sometimes form clans. some are even given citizenship.
+    • Ogres – Hulking, destructive creatures, often enslaved by demons.
+    • Dire Wolves – Pack hunters, large enough to bring down horses.
+    • Wyverns – Lesser dragon-kin, terrorize trade routes and villages.
+
+Spider & Insectoid Monsters
+    • Webcrawlers – Small swarm spiders used for beginner hunts.
+    • Bloodfang Widows – Crimson-striped spiders with blood-draining venom.
+    • Dreamweavers – Hallucination-inducing silk, lure prey into traps.
+    • Abyssfang Broodmother – Calamity-class, spawns endless swarms.
+    • The Nameless Hunger – Evolving anomaly; unpredictable, feared even by demons.
+
+Undead & Cursed Entities
+    • Skeleton Soldiers – Common necromantic pawns, easy to slay but endless.
+    • Wraiths – Spirits feeding on fear, hard to hit with steel.
+    • Cursed Puppets – Humanoid shells animated by corrupted cores; eerie, relentless.
+    • Liches – Master spellcasters, immortal unless their phylactery is destroyed.
+
+Mythic Beasts & Titans
+    • Chimeras – Twisted fusions of beasts, unpredictable abilities.
+    • Hydras – Regenerative monstrosities; cutting one head spawns two more.
+    • Gargantuan Tortoises – Mountains that move; crushing anything beneath.
+    • World Serpent Fragments – Spawn of the primordial serpent, each one a calamity-class threat.
+
+Demonic & Abyssal Threats
+    • Hellhounds – Fiery demon dogs, often appear as omens of invasion.
+    • Nightmares – Shadowy steeds that carry riders across dimensions.
+    • Pitfiends – Demon generals, strong enough to destroy cities alone.
+    • Voidspawn – Monsters that defy reality, born of primordial chaos.
+
+Guild Lore Integration
+    • E–D Rank adventurers → fight goblins, skeletons, and webcrawlers.
+    • C–B Rank adventurers → deal with wyverns, ogres, dreamweavers, and hydras.
+    • A–S Rank adventurers & Heroes → confront liches, broodmothers, world serpents, and abyssal horrors.
+    • Calamities → Nyxarachne, Gargantuan Beasts, Voidspawn fragments — creatures that demand heroes, armies, and legends.
+</pre>
+</div>
+
+<!-- Monster Compendium -->
+<div class="section" id="compendium">
+<h2>Monster Compendium</h2>
+<pre>
+Monster: Goblins
+Savage scavengers thriving in ruined villages and forests. Weak alone but dangerous in hordes. Known for ambushes and crude traps.
+Strengths: Numbers, cunning ambushes.
+Weaknesses: Fragile bodies, low morale.
+Unique Trait: Can adapt stolen weapons for their own use.
+
+Monster: Dire Wolves
+Oversized wolves that hunt in disciplined packs. Their howls signal danger across miles.
+Strengths: Speed, teamwork, powerful jaws.
+Weaknesses: Easily scattered by fire or magic.
+Unique Trait: Pack Instinct — grows stronger the more allies nearby.
+
+Monster: Dreamweaver Spiders
+Large, shadow-dwelling arachnids spinning silk that induces hallucinations. Prey often dies trapped in illusions.
+Strengths: Stealth, illusory silk traps.
+Weaknesses: Low durability, weak against sound or bright light.
+Unique Trait: Webs sap sanity over time.
+
+Monster: Cursed Puppets
+Lifeless dolls or armor shells animated by cursed cores. Move with eerie precision, relentless until destroyed.
+Strengths: Tireless, immune to pain, can use weapons.
+Weaknesses: Core inside chest is their true weak point.
+Unique Trait: Can mimic humanoid voices to lure victims.
+
+Monster: Abyssfang Broodmother
+Calamity-class spider, birthing endless swarms that consume entire regions. Only high-rank adventurers or heroes can oppose it.
+Strengths: Endless spawn, massive body, venomous fangs.
+Weaknesses: Slow, relies heavily on brood.
+Unique Trait: Hive Control — directs swarms telepathically.
+
+New:
+Monster: Hollow Stalkers
+Gaunt, eyeless humanoids that lurk in ruined cities. They hunt by sound, their shrieks paralyzing prey.
+Strengths: Extreme agility, echolocation, terrifying screams.
+Weaknesses: Blind to illusions and light-based magic.
+Unique Trait: Can mimic the last voice they hear.
+
+Monster: Ironmaw Behemoth
+A colossal, plated beast resembling a mix of rhinoceros and lizard. Its armored hide shrugs off blades.
+Strengths: Nearly impenetrable defense, devastating charges.
+Weaknesses: Slow and poor stamina.
+Unique Trait: Armor hardens further when wounded.
+
+Monster: Bloodwillows
+Trees that feed on flesh, luring travelers with fragrant blossoms before ensnaring them with thorned vines.
+Strengths: Camouflage, regenerative bark, poison-laced vines.
+Weaknesses: Fire and axes.
+Unique Trait: Absorbs blood to strengthen its roots, allowing it to walk short distances.
+
+Monster: Dusk Serpents
+Shadowy snakes that thrive in twilight. Their scales bend light, making them nearly invisible until striking.
+Strengths: Stealth, venom that weakens mana flow.
+Weaknesses: Fragile once spotted, vulnerable to cold.
+Unique Trait: Can coil into shadows, vanishing from sight.
+
+Monster: Graveborn Choir
+Undead formed when mass graves awaken as one entity. Their wails drain life and courage from all who listen.
+Strengths: Fear aura, immune to normal weapons.
+Weaknesses: Holy fire or purification magic.
+Unique Trait: The more voices in their song, the stronger they become.
+
+Monster: Ashclaw Harpies
+Winged raiders nesting on volcanic cliffs. They wield molten talons and shriek storms of hot ash.
+Strengths: Aerial supremacy, fire-aligned attacks.
+Weaknesses: Fragile wings, poor endurance in cold.
+Unique Trait: Can ignite their feathers into fiery projectiles.
+</pre>
+</div>
+
+<!-- Neutral Monsters -->
+<div class="section" id="neutral">
+<h2>Neutral Monsters</h2>
+<pre>
+Monster: Emberwing Phoenix
+A radiant bird of flame that rises anew from its ashes. Often seen as a divine omen.
+Neutrality: Guides lost travelers with its light. Dangerous only if captured or harmed.
+
+Monster: Mossback Colossus
+A giant turtle whose shell carries entire groves of plants and wildlife.
+Neutrality: Wanders slowly across lands, shaping ecosystems. Attacks only when its “forest” is disturbed.
+
+Monster: Silverhorn Stag
+A majestic deer with gleaming antlers said to bring fortune.
+Neutrality: Flees from violence, but its charge can shatter stone if cornered.
+
+Monster: Cloudwhale
+Massive leviathans that float through skies like drifting islands.
+Neutrality: Gentle grazers of airborne moss. Deadly if shot at, their falling bodies can crush villages.
+
+Monster: Prism Serpent
+A serpent with crystalline scales that refract sunlight into rainbows.
+Neutrality: Calms nearby wildlife. Strikes only when its lair or eggs are threatened.
+
+Monster: Dreamveil Moth
+Giant moths with wings that release sleep-inducing dust.
+Neutrality: Attracted to campfires and lanterns, but harmless unless startled.
+
+Monster: Moonlit Kirin
+A divine horse covered in starlit patterns. Symbol of purity and balance.
+Neutrality: Avoids mortals. Strikes with celestial fury if corrupted blood touches it.
+
+Monster: Verdant Leviathan
+An aquatic serpent that nurtures coral reefs and sea flora.
+Neutrality: Keeps balance of the seas. If harmed, it triggers tidal disasters.
+
+Monster: Sunflare Roc
+A massive bird said to be born from sunlight itself.
+Neutrality: Preys only on giant beasts. Will fight fiercely if nests are raided.
+
+Monster: Stoneheart Golem
+An ancient guardian of ruins, carved from living rock.
+Neutrality: Immobile unless relics are stolen. Then, its wrath is unstoppable.
+</pre>
+</div>
+
+<!-- Races -->
+<div class="section" id="races">
+<h2>Main Races</h2>
+<pre>
+Humans
+The most adaptable of races, shaping kingdoms, empires, and guilds. Ambitious and inventive, their strength lies in sheer numbers and ingenuity.
+Nature: Neutral; can be saints or tyrants depending on the individual.
+
+Devils
+Elegant beings bound by pacts and order, their infernal blood grants them long lives and mastery of contracts. Unlike demons, they value law and honor, not chaos.
+Nature: Neutral; feared for their power, but not inherently evil.
+
+Dragons
+Ancient, winged titans of unmatched might. Each embodies a force of nature—flame, frost, storm, or even time. Rarely interfere with mortals.
+Nature: Neutral; guardians of balance, destructive only if challenged.
+
+Elvens
+Graceful and wise, the Elvens are masters of magic and song. They see themselves as custodians of the world’s forests and mysteries.
+Nature: Neutral-good; distant, sometimes arrogant.
+
+Dwarvens
+Stout and enduring, they carve their homes deep within mountains. Masters of smithing, their crafts rival relics of the Primordials.
+Nature: Neutral; fiercely loyal, but slow to trust outsiders.
+
+Fairys
+Small, radiant beings born from nature’s magic. Mischievous and playful, but their power can rival ancient sorcery.
+Nature: Neutral; harmless unless their groves are defiled.
+
+Beastkins
+Mortals with animal traits—claws, tails, or fur—born from old unions between spirits and men. They live close to nature and honor primal traditions.
+Nature: Neutral; passionate and proud, but rarely cruel.
+
+Secondary:
+Demons
+Chaotic beings of corruption, thriving on destruction and malice. Unlike devils, they revel in war and suffering.
+Nature: Evil; calamities incarnate, enemies to nearly all.
+
+Tabaxi
+Feline wanderers with keen instincts and quick paws. They live as nomads, storytellers, or thieves.
+Nature: Neutral; curious, playful, but unpredictable.
+
+Gnomes
+Small folk brimming with creativity. Tinkerers, illusionists, and inventors of strange devices.
+Nature: Neutral-good; harmless, though their creations can be dangerous.
+
+Luminari
+Mystical beings of light, said to be born from fallen stars. They radiate calm and wisdom.
+Nature: Neutral-good; revered as guides, but aloof.
+
+Orcs
+Strong and fierce, once known only as raiders. Many now forge clans with honor, though their temper still burns hot.
+Nature: Neutral; warlike, but not mindlessly savage.
+
+Wildkin
+Mortals touched by primal spirits, bearing traits of wolves, hawks, or bears. Unlike Beastkin, their forms are more feral and wild.
+Nature: Neutral; guardians of untamed lands.
+
+Tieflings
+Marked by infernal heritage, horns and tails betray their bloodline. Feared by many, though they may walk any path they choose.
+Nature: Neutral; their fate depends on will, not heritage.
+
+Darkelves
+Exiled cousins of Elvens, dwelling in caverns and shadows. Skilled assassins and masters of forbidden magic.
+Nature: Neutral-evil; dangerous, but bound by rigid traditions.
+
+Woodelves
+Forest dwellers and hunters. Unlike their Elven kin, they are blunt and pragmatic, placing survival above all else.
+Nature: Neutral; suspicious of outsiders but loyal to their own.
+</pre>
+</div>
+
+<!-- Halfbreeds -->
+<div class="section" id="halves">
+<h2>Halfbreed Compendium</h2>
+<pre>
+Demi-Elf
+    • Parent Races: Human × Elven
+    • Appearance & Traits: Tall, graceful, pointed ears, human adaptability with elven longevity. Skilled in magic and archery.
+    • Nature: Neutral; often bridges between humans and elves.
+Demi-Dwarf
+    • Parent Races: Human × Dwarven
+    • Appearance & Traits: Shorter than humans, sturdier build, strong affinity for crafting. Less reclusive than pure dwarves.
+    • Nature: Neutral; practical, respected artisans.
+Demi-Fey
+    • Parent Races: Human × Fairy
+    • Appearance & Traits: Slender, glowing eyes, faint wings or magical aura. Natural affinity for illusion and charm.
+    • Nature: Neutral-good; whimsical and alluring.
+Demi-Beast
+    • Parent Races: Human × Beastkin
+    • Appearance & Traits: Human frame with animal ears, tails, or claws. Strong senses, agile hunters.
+    • Nature: Neutral; passionate, proud, loyal to their kin.
+Demi-Orc
+    • Parent Races: Human × Orc
+    • Appearance & Traits: Muscular, tusks smaller than pure orcs, intelligence closer to humans. Known for strength and stamina.
+    • Nature: Neutral; feared but often honorable.
+Demi-Tiefling
+    • Parent Races: Human × Tiefling
+    • Appearance & Traits: Subtle infernal features (horns, tails, glowing eyes). Natural charisma mixed with demonic resistance.
+    • Nature: Neutral; mistrusted, but powerful.
+Demi-Drake
+    • Parent Races: Human × Dragon
+    • Appearance & Traits: Scales on skin, slit-pupil eyes, partial wings or tail. High magical affinity and fiery breath.
+    • Nature: Neutral; rare and awe-inspiring.
+Demi-Lumin
+    • Parent Races: Human × Luminari
+    • Appearance & Traits: Pale radiant skin, glowing eyes, aura of calm. Natural healers with light magic.
+    • Nature: Neutral-good; revered but distant.
+Demi-Shade
+    • Parent Races: Human × Dark Elf
+    • Appearance & Traits: Dusky skin, silver or white hair, affinity for shadows. Agile, with heightened night vision.
+    • Nature: Neutral-evil; distrusted, but feared assassins.
+Demi-Sylvan
+    • Parent Races: Human × Wood Elf
+    • Appearance & Traits: Earthy tones, green or hazel eyes, strong bond to forests. Skilled trackers and rangers.
+    • Nature: Neutral; reclusive, but dependable allies.
+Demi-Devil
+    • Parent Races: Human × Devil
+    • Appearance & Traits: Elegant, aristocratic look. Small horns or tails, but lawful and refined demeanor.
+    • Nature: Neutral; feared, but not evil.
+Demi-Demon
+    • Parent Races: Human × Demon
+    • Appearance & Traits: Chaotic features—claws, horns, corrupted aura. Strong but unstable powers.
+    • Nature: Evil; distrusted, often hunted.
+
+Lore flavor:
+    • Demi-hybrids are acknowledged, sometimes mistrusted, but still “possible.”
+</pre>
+</div>
+
+<!-- Hybrids -->
+<div class="section" id="hybrids">
+<h2>Non-Human Hybrids</h2>
+<pre>
+Draconic Elf – Dragon × Elf. Otherworldly beauty, scales, wings hidden by glamours. Myth says their voices can command beasts.
+Orken Beastborn – Orc × Beastkin. Hulking predators with animal traits; feared berserkers.
+Sylvan Lumin – Luminari × Wood Elf. Forest guardians, glowing like moonlight through trees.
+Fangborn – Orc × Tiefling. Brutal, cursed strength; unstable, often hunted down.
+Feykin Shade – Fairy × Dark Elf. Illusive tricksters, balancing light and shadow.
+Devilspawn Drake – Devil × Dragon. Impossible union said to be forged in forgotten pacts; wings of shadow, breath of flame.
+Gloomkin – Dark Elf × Demon. Considered abominations; corrupted magic, distrusted even by demons.
+Starborn Dwarf – Dwarf × Luminari. Short, glowing runes across skin, born with natural enchantments.
+Spirit-Touched Wildkin – Wildkin × Fairy. Gentle shamans bonded with nature spirits.
+Ashen Phoenix – Phoenix spirit × Tiefling. Burning soul bound in mortal flesh, both healer and destroyer.
+
+Lore flavor:
+    • Non-human hybrids are so rare they’re often legends, myths, or calamities — most people would never see one in their lifetime. Some may even be born through curses, divine blessing, or reincarnation accidents.
+</pre>
+</div>
+
+<!-- Magic -->
+<div class="section" id="magic">
+<h2>Magic System</h2>
+<pre>
+Magic Systems
+Abjuration – Defense, wards, and seals
+Conjuration – Summoning, creation, teleportation
+Transmutation – Altering matter, shapeshifting
+Necromancy – Life and death manipulation
+Divination – Foresight, scrying, detection
+Illusion – Deception and sensory manipulation
+Enchantment – Mental influence and object infusion
+Evocation – Raw energy, elemental force
+
+Special Magic Types
+Elemental Magic – Fire, Water, Air, Earth, Lightning
+Blood & Ritual Magic – Power through sacrifice or essence
+Shadow / Void Magic – Darkness, fear, corruption
+Cosmic / Celestial Magic – Starfire, light, time, divine channels
+Rune Magic – Symbols channeling power through language
+Nature Magic – Life-force, flora, fauna
+Time Magic – Temporal manipulation (rare, unstable)
+Sound & Color Magic – Vibrations or hues as catalysts
+
+Mana Rules
+Each being has a limited mana pool
+Regeneration occurs naturally or via catalysts
+Overuse risks corruption or physical breakdown
+</pre>
+</div>
+
+<!-- Evolution -->
+<div class="section" id="evolution">
+<h2>Monster Evolution</h2>
+<pre>
+Triggers: catalysts, environment, willpower, rituals.
+
+Results: mutation, abilities, corruption.
+
+Paths:
+Slime ? Ooze ? Horror
+Wolf ? Dire Wolf ? Hellhound
+Goblin ? Hobgoblin ? Warbringer
+Frog ? Giant Frog ? Froghemoth
+</pre>
+</div>
+
+<!-- Gods -->
+<div class="section" id="gods">
+<h2>The Twelvefold Celestium (Pantheon)</h2>
+<pre>
+The Twelvefold Celestium — Pantheon of the Mortal Realms
+Created by the Primordials, these twelve gods govern reality. Their alliances shift, some war, some love, some deceive—and two of them constantly bicker, driving the entire pantheon insane.
+    Each god views “heroes” differently—based on their domain, temperament, and divine politics.
+Heroes are considered Children of the Blessing, empowered by gods but ultimately free-willed.
+
+Pantheon Structure Summary
+Light-aligned
+• Velysaria — Rebirth
+• Seraphel — Justice
+• Thandros — Valor
+• Arothyl — Life
+Grey / Neutral
+• Elyndra — Memory
+• Kyrathene — Shadows
+• Ilmerion — Travel
+• Vornach — Forge
+• Drexul — Judgment
+Dark / Evil
+• Maelxira — Ruin
+• Kharvoss — War
+
+    GODDESSES
+Velysaria – Goddess of Rebirth
+Domain: Reincarnation, Life Cycles
+    • Welcomes isekai heroes warmly; considers them “soul-fragments returning home.”
+    • Offers visions, déjà vu, and symbolic dreams.
+    • Rarely interferes directly.
+
+    Elyndra Vael – Goddess of Arcane Memory
+Domain: Magic & Lost Timelines
+    • Favors heroes with intelligence or magical talent.
+    • Gives cryptic memory flashes from past worlds.
+    • Tests heroes through puzzles and paradoxes.
+
+    Kyrathene Nocthollow – Goddess of Shadows
+Domain: Secrets, Temptation, Hidden Truth
+    • Tempts heroes with forbidden shortcuts.
+    • Respects cunning more than virtue.
+    • Often warns heroes of divine schemes.
+
+    Seraphel Dawnwrought – Goddess of Radiance
+Domain: Light, Order, Justice
+    • Judges heroes strictly.
+    • Protects those showing righteousness, rejects chaotic ones.
+    • Can clash with heroes who question authority.
+
+    Xelvara Myrrh – Goddess of Desire & Freedom
+Domain: Passion, Impulse, Liberation
+    • Loves heroes who break rules and follow their own hearts.
+    • Gives bursts of inspiration or power during emotional peaks.
+    • Often steals heroes from other gods’ “service.”
+
+    Maelxira the Venomed Crown – Goddess of Ruin
+Domain: Decay, Corruption, Dark Beauty
+    • “Tests” heroes by pushing them toward despair.
+    • Seduces heroes into self-destruction—or rebirth through suffering.
+    • Constantly bickers with Kharvoss about who “deserves” hero souls.
+
+GODS
+Thandros Stormborne – God of Valor
+Domain: Courage, Trials
+    • Loves isekai heroes; sees them as fun “projects.”
+    • Constantly throws challenges their way.
+    • Laughs when they succeed or fail—both are lessons.
+
+Vornach the Black Anvil – God of Creation
+Domain: Forge, Titans, Fire
+    • Gifts heroes legendary weapons if they prove themselves.
+    • Rarely speaks, but sends omens through fire and metal.
+
+Ilmerion Hallowstride – God of Travel & Fate
+Domain: Roads, Luck, Serendipity
+    • Acts as a guide or trickster depending on mood.
+    • Ensures heroes “accidentally” meet allies or enemies.
+
+Drexul the Devouring Quill – God of Records
+Domain: Judgment, Death, Law
+    • Watches heroes silently, measuring their worth.
+    • Rewards integrity; punishes hubris.
+    • Keeps the ledger of reincarnated souls.
+
+Kharvoss Nightreaver – God of War & Hunger
+Domain: Conquest, Blood, Domination
+    • Sees heroes as tools or future opponents.
+    • May grant strength, but always demands violence in return.
+    • Constantly argues with Maelxira about whose domain heroes truly serve.
+
+Arothyl Greenwake – God of Life & Beasts
+Domain: Nature, Primal Growth
+    • Judges heroes by how they treat nature and animals.
+    • Grants blessings to those who respect wild places.
+    • Neutral but protective.
+
+Evil Pair Dynamic — Maelxira & Kharvoss
+They are NOT allies—just equally awful.
+    • They constantly insult, sabotage, and try to out-scheme each other.
+    • Their divine followers often end up fighting each other more than anyone else.
+    • The other gods have a joke:
+“If one of them ever wins, the universe loses.”
+</pre>
+</div>
+
+<!-- Primordials -->
+<div class="section" id="primordials">
+<h2>The Seven Primordials & Prayers</h2>
+<pre>
+THE PRIMORDIALS — The Seven That Shaped All Life
+Unlike gods, Primordials are not good or evil.
+They represent cosmic aspects, vast and incomprehensible.
+Their blessings are extremely rare and require the Sevenfold Prayer.
+They created:
+    • The seven races
+    • The first goddess
+    • The foundation of magic
+    • The cosmic cycle of reincarnation
+Below are their roles and the ancient prayers you requested.
+
+1. Malfurion – The Devil Primordial
+Aspect: Strength, Endurance, Survival Through Fire
+Creator of: Demons & Infernal Races
+    • Values resilience, not cruelty.
+    • Appears in volcanic storms or molten shadow.
+Ancient Prayer
+From the depths where flame and stone still sing…
+Let me stand in your shadow, unbroken.
+
+2. Isabella – The Human Primordial
+Aspect: Mortality, Compassion, Aspirational Flame
+Creator of: Humans
+    • Believes weakness creates growth.
+    • Appears as a warm, radiant echo of humanity.
+Ancient Prayer
+O Isabella, torch of mortal spirit…
+Let me burn brighter still.
+
+3. Nicol – The Dragon Primordial
+Aspect: Majesty, Eternal Wisdom, Flame of Origin
+Creator of: Dragons
+    • Serene, ancient, rarely speaks.
+    • Appears as a constellation wrought in draconic form.
+Ancient Prayer
+Nicol, Eternal Wyrm of Dawn’s first breath…
+Until I return to your storm-lit sky.
+
+4. Æowyn – The Elven Primordial
+Aspect: Nature, Balance, Twilight Harmony
+Creator of: Elves
+    • Gentle and sorrowful; carries the weight of ages.
+    • Appears as a figure made of woven moonlight.
+Ancient Prayer
+Æowyn, Silent Weaver of stars and root…
+Let me rest beneath your boughs forever.
+
+5. Dwargon – The Dwarven Primordial
+Aspect: Craftsmanship, Fire, Stone, Resolve
+Creator of: Dwarves
+    • Stern but fair; values mastery and honesty.
+    • Appears through echoes in deep caverns.
+Ancient Prayer
+Hail, Dwargon, Anvil-Father…
+And remake me in your flame.
+
+6. Lunara – The Fairy Primordial
+Aspect: Joy, Beauty, Trickery, Starlight
+Creator of: Fairies & Feyfolk
+    • Mischievous, emotional, unpredictable.
+    • Appears as dancing light across still water.
+Ancient Prayer
+O Lunara, Dawn’s laughter, Dusk’s tears…
+Let me walk in your twilight shimmer.
+
+7. Shinoburu – The Beastkin Primordial
+Aspect: Instinct, Wild Freedom, Unity of Nature
+Creator of: Beastkin
+    • A shifting beast of many forms.
+    • Appears in storms, hunts, and moonlit forests.
+Ancient Prayer
+Shinoburu, Chimera of all wild things,
+Fangs and feathers, claws and scales,
+Voice of the hunt and howl of the pack.
+
+How Primordials View Heroes
+    • Primordials do NOT choose heroes—they choose successors, world-menders, or pivot points in fate.
+    • They grant power sparingly; each blessing is world-shaking.
+    • They rarely manifest; their will is known through:
+        ◦ omens
+        ◦ cosmic disturbances
+        ◦ ancestral memories
+        ◦ resonance with the soul
+Their attitude toward heroes:
+    • Isabella admires human courage → often guides isekai heroes.
+    • Malfurion respects strength through suffering → tests heroes brutally.
+    • Nicol judges heroes’ wisdom → will empower those who evolve.
+    • Æowyn values harmony → helps heroes who heal rather than destroy.
+    • Dwargon helps heroes who craft, build, or protect.
+    • Lunara enjoys heroes who bring joy or chaos.
+    • Shinoburu favors heroes embracing instinct and truth.
+</pre>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
